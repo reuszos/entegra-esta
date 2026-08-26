@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,49 +13,115 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('Slide8.JPG');
+            background-image: linear-gradient(rgba(var(--background-rgb), 0.85), rgba(var(--background-rgb), 0.95)), url('Slide8.JPG');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+        /* Design System Variables */
+        :root {
+            --background-rgb: 15, 23, 42; /* slate-900 */
+            --foreground-rgb: 255, 255, 255; /* slate-50 */
+            --primary-rgb: 59, 130, 246; /* blue-500 */
+            --primary-hover-rgb: 37, 99, 235; /* blue-600 */
+            --accent-rgb: 16, 185, 129; /* emerald-500 */
+            --muted-rgb: 100, 116, 139; /* slate-500 */
+            --border-rgb: 30, 41, 59; /* slate-800 */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --transition-fast: 150ms;
+            --transition: 300ms;
+        }
+        [data-theme="light"] {
+            --background-rgb: 250, 250, 250; /* slate-50 */
+            --foreground-rgb: 15, 23, 42; /* slate-900 */
+            --primary-rgb: 59, 130, 246; /* blue-500 */
+            --primary-hover-rgb: 37, 99, 235; /* blue-600 */
+            --accent-rgb: 16, 185, 129; /* emerald-500 */
+            --muted-rgb: 71, 85, 105; /* slate-600 */
+            --border-rgb: 229, 231, 235; /* slate-200 */
+        }
+        .bg-main { background-color: rgb(var(--background-rgb)); }
+        .text-main { color: rgb(var(--foreground-rgb)); }
+        .border-main { border-color: rgb(var(--border-rgb)); }
+        .bg-primary { background-color: rgb(var(--primary-rgb)); }
+        .hover\:bg-primary:hover { background-color: rgb(var(--primary-hover-rgb)); }
+        .text-primary { color: rgb(var(--primary-rgb)); }
+        .hover\:text-primary:hover { color: rgb(var(--primary-hover-rgb)); }
+        .bg-accent { background-color: rgb(var(--accent-rgb)); }
+        .text-accent { color: rgb(var(--accent-rgb)); }
+        .text-muted { color: rgb(var(--muted-rgb)); }
+        .focus-visible\:outline-none:focus-visible { outline: none; }
+        .focus-visible\:ring-2:focus-visible { ring-width: 2px; }
+        .focus-visible\:ring-primary:focus-visible { ring-color: rgb(var(--primary-rgb)); }
+        .focus-visible\:ring-offset-2:focus-visible { ring-offset-width: 2px; }
+        .focus-visible\:ring-offset-main:focus-visible { ring-offset-color: rgb(var(--background-rgb)); }
+        /* Section transitions */
+        .section-enter-active, .section-leave-active { transition: opacity var(--transition); }
+        .section-enter-from, .section-leave-to { opacity: 0; }
+        .section-enter-to, .section-leave-from { opacity: 1; }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-red-600 selection:text-white">
+<body class="bg-main text-main antialiased selection:bg-primary/20 selection:text-main">
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-2 rounded-md bg-primary/20 text-primary hover:bg-primary/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
 
     <!-- Navbar -->
-    <header class="fixed w-full top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+    <header class="fixed w-full top-0 z-50 bg-main/95 backdrop-blur-md border-b border-main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3">
                 <img src="logo.jpg" alt="Logo ESTA" class="h-12 w-auto rounded object-cover shadow-sm">
                 <div class="hidden sm:block">
-                    <span class="text-lg font-bold tracking-tight text-white block leading-none">PT. ENTEGRA SOBA TAMA</span>
-                    <span class="text-xs text-slate-400 italic">Bringing Ideas to Life</span>
+                    <span class="text-lg font-bold tracking-tight text-main block leading-none">PT. ENTEGRA SOBA TAMA</span>
+                    <span class="text-xs text-muted italic">Bringing Ideas to Life</span>
                 </div>
             </a>
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                <a href="#tentang" class="hover:text-red-500 transition-colors">Tentang Kami</a>
-                <a href="#layanan" class="hover:text-red-500 transition-colors">Layanan</a>
-                <a href="#sertifikasi" class="hover:text-red-500 transition-colors">Sertifikasi</a>
-                <a href="#portfolio" class="hover:text-red-500 transition-colors">Portofolio</a>
-                <a href="#kontak" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg transition-all shadow-md">Hubungi Kami</a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-muted">
+                <a href="#tentang" class="hover:text-main transition-colors" aria-label="Tentang Kami section">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-main transition-colors" aria-label="Layanan section">Layanan</a>
+                <a href="#sertifikasi" class="hover:text-main transition-colors" aria-label="Sertifikasi section">Sertifikasi</a>
+                <a href="#portfolio" class="hover:text-main transition-colors" aria-label="Portfolio section">Portofolio</a>
+                <a href="#kontak" class="bg-primary hover:bg-primary/90 text-main px-5 py-2.5 rounded-lg transition-all shadow-md">Hubungi Kami</a>
             </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md bg-primary/20 text-primary hover:bg-primary/30" aria-label="Open mobile menu" aria-controls="mobile-menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-main/95 backdrop-blur-md">
+        <div class="px-4 pt-5 pb-4 space-y-6 sm:p-6">
+            <a href="#tentang" class="block text-lg font-medium text-main hover:text-primary" aria-label="Tentang Kami section">Tentang Kami</a>
+            <a href="#layanan" class="block text-lg font-medium text-main hover:text-primary" aria-label="Layanan section">Layanan</a>
+            <a href="#sertifikasi" class="block text-lg font-medium text-main hover:text-primary" aria-label="Sertifikasi section">Sertifikasi</a>
+            <a href="#portfolio" class="block text-lg font-medium text-main hover:text-primary" aria-label="Portfolio section">Portofolio</a>
+            <a href="#kontak" class="block w-full text-center bg-primary text-main px-5 py-2.5 rounded-lg shadow-md" aria-label="Hubungi Kami section">Hubungi Kami</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-24 md:pt-48 md:pb-32 hero-bg">
+    <section id="hero" class="relative pt-32 pb-24 md:pt-48 md:pb-32 hero-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
             <div class="max-w-3xl">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-main tracking-tight leading-tight mb-6">
                     Solusi Terintegrasi Rekayasa & Konstruksi Industri
                 </h1>
-                <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+                <p class="text-lg sm:text-xl text-muted mb-8 leading-relaxed">
                     Spesialis di bidang Proses, Mekanikal, Perpipaan, Elektrik, dan Instrumentasi. Kami berkomitmen memberikan kualitas dan keamanan terbaik sejak 2023.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#portfolio" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
+                    <a href="#portfolio" class="bg-primary hover:bg-primary/90 text-main font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
                         <span>Lihat Proyek Kami</span>
                         <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#kontak" class="border border-primary hover:bg-primary/20 text-primary font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center space-x-2">
+                        <span>Hubungi Kami Sekarang</span>
+                        <i class="fa-solid fa-phone"></i>
                     </a>
                 </div>
             </div>
@@ -63,21 +129,21 @@
     </section>
 
     <!-- Tentang & Visi Misi -->
-    <section id="tentang" class="py-20 bg-slate-900">
+    <section id="tentang" class="py-20 bg-main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
-                    <img src="Slide6.JPG" alt="Visi Misi" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-main">
+                    <img src="Slide6.JPG" alt="Visi Misi ESTA" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500 loading=lazy">
                 </div>
                 <div>
-                    <h2 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">Profil Perusahaan</h2>
-                    <h3 class="text-3xl font-bold text-white mb-6">Latar Belakang & Legalitas</h3>
-                    <p class="text-slate-300 mb-4 leading-relaxed">
+                    <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Profil Perusahaan</h2>
+                    <h3 class="text-3xl font-bold text-main mb-6">Latar Belakang & Legalitas</h3>
+                    <p class="text-muted mb-4 leading-relaxed">
                         PT. Entegra Soba Tama (ESTA) merupakan perusahaan yang bergerak di bidang rekayasa dan konstruksi yang berdiri sejak tahun 2023 di Cikarang.
                     </p>
-                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 mt-6">
-                        <img src="Slide3.JPG" alt="Legalitas" class="w-full rounded mb-4 object-cover">
-                        <p class="text-sm text-slate-300">Resmi terdaftar dengan NIB: 2812230271534 dan status Pengusaha Kena Pajak (PKP).</p>
+                    <div class="bg-main/50 p-6 rounded-xl border border-main mt-6">
+                        <img src="Slide3.JPG" alt="Legalitas Dokumen" class="w-full rounded mb-4 object-cover loading=lazy">
+                        <p class="text-sm text-muted">Resmi terdaftar dengan NIB: 2812230271534 dan status Pengusaha Kena Pajak (PKP).</p>
                     </div>
                 </div>
             </div>
@@ -85,36 +151,36 @@
     </section>
 
     <!-- Layanan & Keahlian -->
-    <section id="layanan" class="py-20 bg-slate-950 border-y border-slate-800">
+    <section id="layanan" class="py-20 bg-main/50 border-y border-main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">Our Services</h2>
-                <h3 class="text-3xl font-bold text-white">Layanan & Keahlian Utama</h3>
+                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Our Services</h2>
+                <h3 class="text-3xl font-bold text-main">Layanan & Keahlian Utama</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
                 <div>
-                    <img src="Slide9.JPG" alt="Our Service" class="w-full rounded-2xl shadow-lg border border-slate-700">
+                    <img src="Slide9.JPG" alt="Our Service Overview" class="w-full rounded-2xl shadow-lg border border-main loading=lazy">
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                        <i class="fa-solid fa-drafting-compass text-2xl text-red-500 mb-3 block"></i>
-                        <h4 class="font-bold text-white mb-2">Jasa Teknik</h4>
-                        <p class="text-xs text-slate-400">PFD, P&ID, Reverse Engineering, Desain Teknikal.</p>
+                    <div class="bg-main/50 p-6 rounded-xl border border-main">
+                        <i class="fa-solid fa-drafting-compass text-2xl text-primary mb-3 block"></i>
+                        <h4 class="font-bold text-main mb-2">Jasa Teknik</h4>
+                        <p class="text-xs text-muted">PFD, P&ID, Reverse Engineering, Desain Teknikal.</p>
                     </div>
-                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                        <i class="fa-solid fa-wrench text-2xl text-blue-500 mb-3 block"></i>
-                        <h4 class="font-bold text-white mb-2">Fabrikasi & Instalasi</h4>
-                        <p class="text-xs text-slate-400">Piping, Mekanikal, Panel Unit, Ducting.</p>
+                    <div class="bg-main/50 p-6 rounded-xl border border-main">
+                        <i class="fa-solid fa-wrench text-2xl text-primary mb-3 block"></i>
+                        <h4 class="font-bold text-main mb-2">Fabrikasi & Instalasi</h4>
+                        <p class="text-xs text-muted">Piping, Mekanikal, Panel Unit, Ducting.</p>
                     </div>
-                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                        <i class="fa-solid fa-microchip text-2xl text-red-500 mb-3 block"></i>
-                        <h4 class="font-bold text-white mb-2">Automation & PLC</h4>
-                        <p class="text-xs text-slate-400">Programming, Wiring & Terminasi, Commissioning.</p>
+                    <div class="bg-main/50 p-6 rounded-xl border border-main">
+                        <i class="fa-solid fa-microchip text-2xl text-primary mb-3 block"></i>
+                        <h4 class="font-bold text-main mb-2">Automation & PLC</h4>
+                        <p class="text-xs text-muted">Programming, Wiring & Terminasi, Commissioning.</p>
                     </div>
-                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                        <i class="fa-solid fa-gears text-2xl text-blue-500 mb-3 block"></i>
-                        <h4 class="font-bold text-white mb-2">Perawatan Mesin</h4>
-                        <p class="text-xs text-slate-400">Overhaul mesin industri, maintenance utility (pump, boiler).</p>
+                    <div class="bg-main/50 p-6 rounded-xl border border-main">
+                        <i class="fa-solid fa-gears text-2xl text-primary mb-3 block"></i>
+                        <h4 class="font-bold text-main mb-2">Perawatan Mesin</h4>
+                        <p class="text-xs text-muted">Overhaul mesin industri, maintenance utility (pump, boiler).</p>
                     </div>
                 </div>
             </div>
@@ -122,166 +188,380 @@
     </section>
 
     <!-- Sertifikasi -->
-    <section id="sertifikasi" class="py-20 bg-slate-900">
+    <section id="sertifikasi" class="py-20 bg-main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">Certified Experts</h2>
-                <h3 class="text-3xl font-bold text-white">Sertifikasi Keahlian Tim</h3>
+                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Sertifikasi Keahlian</h2>
+                <h3 class="text-3xl font-bold text-main">Standar Keahlian Tim</h3>
             </div>
             <div class="flex justify-center">
-                <img src="Slide5.JPG" alt="Sertifikasi Keahlian" class="max-w-full md:max-w-4xl rounded-xl shadow-2xl border border-slate-700 hover:scale-[1.02] transition-transform">
+                <a href="https://www.example.com/sertifikasi-esta" target="_blank" rel="noopener noreferrer" class="max-w-full md:max-w-4xl rounded-xl shadow-2xl border border-main hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">
+                    <img src="Slide5.JPG" alt="Sertifikasi Keahlian ESTA" class="w-full h-auto object-cover">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-main">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Klien Kami</h2>
+                <h3 class="text-3xl font-bold text-main">Testimonial</h3>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main">
+                    <p class="italic text-muted mb-4">"ESTA memberikan solusi yang sangat profesional dan tepat waktu untuk proyek piping kami. Rekomendasi tinggi!"</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-main">PT Barata Indonesia</h4>
+                            <p class="text-sm text-muted">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main">
+                    <p class="italic text-muted mb-4">"Tim ESTa sangat kompetent dalam menangani sistem kontrol PLC untuk infrastruktur kritis kami."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-main">PT Pertamina EP Zone 7</h4>
+                            <p class="text-sm text-muted">Engineering Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main">
+                    <p class="italic text-muted mb-4">"Layanan fabrikasi dan instalasi ESTA exceeds expectations, dengan atenção aos detalhes excepcionais."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-main">PT Medco E&P</h4>
+                            <p class="text-sm text-muted">Operations Supervisor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/News -->
+    <section id="blog" class="py-20 bg-main/50 border-t border-main">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Berita & Artikel</h2>
+                <h3 class="text-3xl font-bold text-main">Terbaru dari ESTA</h3>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Blog Post 1 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main hover:bg-main/60 transition-colors">
+                    <img src="Slide12.JPG" alt="Proyek Hydrant System" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
+                    <h4 class="font-bold text-main mb-2">Peningkatan Sistem Hydrant di RS Walet Cirebon</h4>
+                    <p class="text-sm text-muted mb-2">April 2026 - ESTA berhasil menyelesaikan upgrade sistem hydrant dengan standar internasional.</p>
+                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main hover:bg-main/60 transition-colors">
+                    <img src="Slide13.JPG" alt="Spray Dryer Chamber" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
+                    <h4 class="font-bold text-main mb-2">Inovasi Spray Dryer untuk PT Hunstman Indonesia</h4>
+                    <p class="text-sm text-muted mb-2">Maret 2026 - Desain chamber baru yang meningkatkan efisiensi 20%.</p>
+                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="bg-main/50 p-6 rounded-xl border border-main hover:bg-main/60 transition-colors">
+                    <img src="Slide14.JPG" alt="Mixer Tank 3 Ton" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
+                    <h4 class="font-bold text-main mb-2">Fabrikasi Mixer Tank untuk PT Mane Indonesia</h4>
+                    <p class="text-sm text-muted mb-2">Februari 2026 - Tank custom dengan lining spesial untuk bahan kimia korosif.</p>
+                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Proyek -->
-    <section id="portfolio" class="py-20 bg-slate-950 border-t border-slate-800">
+    <section id="portfolio" class="py-20 bg-main border-t border-main">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <img src="Slide10.JPG" alt="Our Project" class="w-full max-w-3xl mx-auto rounded-xl opacity-80 mb-8 border border-slate-700">
-                <h3 class="text-3xl font-bold text-white">Project Portfolio (EPCI)</h3>
-                <p class="text-slate-400 mt-2">Kumpulan proyek unggulan yang telah kami kerjakan</p>
+                <img src="Slide10.JPG" alt="Our Project Overview" class="w-full max-w-3xl mx-auto rounded-xl opacity-80 mb-8 border border-main loading=lazy">
+                <h3 class="text-3xl font-bold text-main">Project Portfolio (EPCI)</h3>
+                <p class="text-sm text-muted mt-2">Kumpulan proyek unggulan yang telah kami kerjakan</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Filter Buttons -->
+            <div class="mb-8 flex flex-wrap gap-4 justify-center">
+                <button data-filter="all" class="filter-btn bg-primary text-main px-4 py-2 rounded-md hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Semua</button>
+                <button data-filter="piping" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Piping</button>
+                <button data-filter="plc" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">PLC & Otomasi</button>
+                <button data-filter="struktural" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Struktural & Mekanikal</button>
+                <button data-filter="monitoring" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Monitoring & Kontrol</button>
+            </div>
+
+            <div id="portfolio-grid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Proyek 1 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="piping">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide12.JPG" alt="Hydrant System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide12.JPG" alt="Hydrant System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">RS Walet Cirebon</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Hydrant System</h4>
-                        <p class="text-xs text-slate-400">Desain hidrolik, material piping, fabrikasi, instalasi & commissioning test.</p>
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">RS Walet Cirebon</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Hydrant System</h4>
+                        <p class="text-xs text-muted">Desain hidrolik, material piping, fabrikasi, instalasi & commissioning test.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 2 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="plc">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide13.JPG" alt="Spray Dryer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide13.JPG" alt="Spray Dryer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-blue-400 uppercase font-bold tracking-wider">PT Hunstman Indonesia</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Spray Dryer Chamber</h4>
-                        <p class="text-xs text-slate-400">Analisa deluge system, penentuan orientasi nozzle, dan crack test chamber.</p>
+                        <span class="text-[10px] text-muted uppercase font-bold tracking-wider">PT Hunstman Indonesia</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Spray Dryer Chamber</h4>
+                        <p class="text-xs text-muted">Analisa deluge system, penentuan orientasi nozzle, dan crack test chamber.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 3 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="struktural">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide14.JPG" alt="Mixer 3 Ton" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide14.JPG" alt="Mixer 3 Ton" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">PT Mane Indonesia</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Mixer Tank 3 Ton</h4>
-                        <p class="text-xs text-slate-400">Desain kalkulasi, fabrikasi QC, supervisi instalasi, dan commissioning test.</p>
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">PT Mane Indonesia</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Mixer Tank 3 Ton</h4>
+                        <p class="text-xs text-muted">Desain kalkulasi, fabrikasi QC, supervisi instalasi, dan commissioning test.</p>
                     </div>
                 </div>
 
-                
-                <!-- Proyek 5 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <!-- Proyek 4 -->
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="plc">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide16.JPG" alt="Programming & PLC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide15.JPG" alt="Chemical Liquid" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">PT Barata Indonesia</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Bendungan Ameroro - PLC</h4>
-                        <p class="text-xs text-slate-400">Programming PLC, penyediaan panel, wiring & terminasi kontrol sistem.</p>
+                        <span class="text-[10px] text-muted uppercase font-bold tracking-wider">PT Argapura</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Chemical Process Control</h4>
+                        <p class="text-xs text-muted">Loading/unloading system, HMI, instrumentasi material preparation.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 5 -->
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="plc">
+                    <div class="h-56 overflow-hidden">
+                        <img src="Slide16.JPG" alt="Programming & PLC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">PT Barata Indonesia</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Bendungan Ameroro - PLC</h4>
+                        <p class="text-xs text-muted">Programming PLC, penyediaan panel, wiring & terminasi kontrol sistem.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 6 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="monitoring">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide17.JPG" alt="Pertamina Amine Heater" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide17.JPG" alt="Pertamina Amine Heater" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-blue-400 uppercase font-bold tracking-wider">PT Pertamina EP Zone 7</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Amine Heater Control</h4>
-                        <p class="text-xs text-slate-400">Penggantian PLC, update instrumentasi, dan penarikan kabel kontrol.</p>
+                        <span class="text-[10px] text-muted uppercase font-bold tracking-wider">PT Pertamina EP Zone 7</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Amine Heater Control</h4>
+                        <p class="text-xs text-muted">Penggantian PLC, update instrumentasi, dan penarikan kabel kontrol.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 7 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="struktural">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide18.JPG" alt="Chemical Liquid" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide18.JPG" alt="Monitoring System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">PT Argapura</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Chemical Process Control</h4>
-                        <p class="text-xs text-slate-400">Loading/unloading system, HMI, instrumentasi material preparation.</p>
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">PT ALBA Indonesia</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">DAQ & Monitoring System</h4>
+                        <p class="text-xs text-muted">Water flow monitoring & acquisition system, PLC programming, panel wiring.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 8 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="plc">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide19.JPG" alt="Monitoring System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide19.JPG" alt="Engineering Medco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-blue-400 uppercase font-bold tracking-wider">PT ALBA Indonesia</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">DAQ & Monitoring System</h4>
-                        <p class="text-xs text-slate-400">Water flow monitoring & acquisition system, PLC programming, panel wiring.</p>
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">PT Medco E&P</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">MEG Injection Packages</h4>
+                        <p class="text-xs text-muted">Desain & perhitungan teknik, layout gambar engineering, piping & dokumen bid.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 9 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="struktural">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide20.JPG" alt="Engineering Medco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide20.JPG" alt="Project X" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">PT Medco E&P</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">MEG Injection Packages</h4>
-                        <p class="text-xs text-slate-400">Desain & perhitungan teknik, layout gambar engineering, piping & dokumen bid.</p>
+                        <span class="text-[10px] text-success uppercase font-bold tracking-wider">Client Name</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Industrial Project</h4>
+                        <p class="text-xs text-muted">Desain, fabrikasi, instalasi, dan commissioning sistem industri.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 10 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="monitoring">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide21.JPG" alt="Project X" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide21.JPG" alt="Project Y" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-green-400 uppercase font-bold tracking-wider">Client Name</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Industrial Project</h4>
-                        <p class="text-xs text-slate-400">Desain, fabrikasi, instalasi, dan commissioning sistem industri.</p>
+                        <span class="text-[10px] text-muted uppercase font-bold tracking-wider">Client Name</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Infrastructure Project</h4>
+                        <p class="text-xs text-muted">Proyek infrastruktur dengan standar kualitas dan keamanan tinggi.</p>
                     </div>
                 </div>
 
                 <!-- Proyek 11 -->
-                <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 group">
+                <div class="bg-main/50 rounded-2xl overflow-hidden border border-main group item" data-category="plc">
                     <div class="h-56 overflow-hidden">
-                        <img src="Slide22.JPG" alt="Project Y" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Slide22.JPG" alt="Project Z" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
                     </div>
                     <div class="p-6">
-                        <span class="text-[10px] text-purple-400 uppercase font-bold tracking-wider">Client Name</span>
-                        <h4 class="text-lg font-bold text-white mt-1 mb-2">Infrastructure Project</h4>
-                        <p class="text-xs text-slate-400">Proyek infrastruktur dengan standar kualitas dan keamanan tinggi.</p>
+                        <span class="text-[10px] text-primary uppercase font-bold tracking-wider">Client Name</span>
+                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Proyek Lainnya</h4>
+                        <p class="text-xs text-muted">Desain spesial untuk aplikasi unik.</p>
                     </div>
                 </div>
-
-                            </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="kontak" class="bg-slate-900 border-t border-slate-800 py-12">
+    <footer id="kontak" class="bg-main border-t border-main py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold text-white mb-6">Mulai Proyek Anda Bersama Kami</h2>
-            <p class="text-slate-400 mb-8 max-w-2xl mx-auto">Kami siap memberikan solusi engineering dan instalasi terbaik untuk kebutuhan industri Anda.</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-slate-400 hover:text-red-500 text-2xl"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="text-slate-400 hover:text-red-500 text-2xl"><i class="fa-solid fa-phone"></i></a>
-                <a href="#" class="text-slate-400 hover:text-red-500 text-2xl"><i class="fa-solid fa-location-dot"></i></a>
+            <h2 class="text-2xl font-bold text-main mb-6">Mulai Proyek Anda Bersama Kami</h2>
+            <p class="text-sm text-muted mb-8 max-w-2xl mx-auto">Kami siap memberikan solusi engineering dan instalasi terbaik untuk kebutuhan industri Anda.</p>
+            <div class="space-y-4">
+                <div class="flex flex-row items-center justify-center gap-3 flex-wrap">
+                    <div class="flex items-center gap-1">
+                        <a href="mailto:entegra.esta@gmail.com" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span class="font-normal">entegra.esta@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <a href="mailto:sales@entegra-esta.com" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span class="font-normal">sales@entegra-esta.com</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <a href="tel:+62811860127" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                            <span class="font-normal">+62 811-8601-27</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <a href="https://maps.google.com/?q=Ruko+Pallazo+blok+AB+No.+62+Villa+Mutiara+Cikarang+Jawa+Barat+17532+Indonesia" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="font-normal whitespace-nowrap">Ruko Pallazo blok AB No. 62 Villa Mutiara, Cikarang, Jawa Barat, 17532, Indonesia</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="text-xs text-slate-500">&copy; 2026 PT. Entegra Soba Tama (ESTA). All rights reserved.</p>
+            <p class="text-xs text-muted mt-4">&copy; 2026 PT. Entegra Soba Tama (ESTA). All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        function updateThemeIcon(isDark) {
+            themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme === 'dark');
+        } else {
+            htmlElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+            updateThemeIcon(systemPrefersDark);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme === 'dark');
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.className = isOpen ? 'fas fa-bars' : 'fas fa-times';
+        });
+
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('#portfolio-grid .item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-main'));
+                filterButtons.forEach(btn => btn.classList.add('bg-main/50', 'text-primary'));
+                button.classList.remove('bg-main/50', 'text-primary');
+                button.classList.add('bg-primary', 'text-main');
+
+                const filter = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (filter === 'all' || itemCategory === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Initialize first button as active
+        document.querySelector('[data-filter="all"]').classList.add('bg-primary', 'text-main');
+        document.querySelector('[data-filter="all"]').classList.remove('bg-main/50', 'text-primary');
+
+        // Optional: Add intersection observer for fade-in sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-enter-to');
+                    entry.target.classList.remove('section-enter-from');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('section-enter-from');
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
