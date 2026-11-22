@@ -1,723 +1,689 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth" data-theme="dark">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Entegra Soba Tama (ESTA) - Engineering & Construction</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="PT. Entegra Soba Tama (ESTA) menyediakan layanan engineering & konstruksi industri terintegrasi sejak 2023. Spesialisasi dalam proses, mekanikal, perpipaan, elektrik, dan instrumentasi dengan komitmen kualitas dan keamanan terbaik.">
-    <link rel="canonical" href="https://www.entegra-esta.com/">
-    <!-- Open Graph -->
-    <meta property="og:title" content="PT. Entegra Soba Tama (ESTA) - Engineering & Construction">
-    <meta property="og:description" content="PT. Entegra Soba Tama (ESTA) menyediakan layanan engineering & konstruksi industri terintegrasi sejak 2023.">
-    <meta property="og:image" content="https://www.entegra-esta.com/logo.jpg">
-    <meta property="og:url" content="https://www.entegra-esta.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="PT. Entegra Soba Tama (ESTA)">
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PT. Entegra Soba Tama (ESTA) - Engineering & Construction">
-    <meta name="twitter:description" content="PT. Entegra Soba Tama (ESTA) menyediakan layanan engineering & konstruksi industri terintegrasi sejak 2023.">
-    <meta name="twitter:image" content="https://www.entegra-esta.com/logo.jpg">
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PT. Entegra Soba Tama (ESTA)",
-      "image": "https://www.entegra-esta.com/logo.jpg",
-      "@id": "https://www.entegra-esta.com/",
-      "url": "https://www.entegra-esta.com/",
-      "telephone": "+62811860127",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ruko Pallazo blok AB No. 62 Villa Mutiara",
-        "addressLocality": "Cikarang",
-        "addressRegion": "Jawa Barat",
-        "postalCode": "17532",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-6.315",
-        "longitude": "107.150"
-      },
-      "openingHours": [
-        "Mo, Tu, We, Th, Fr 08:00-17:00"
-      ],
-      "sameAs": [
-        "https://www.facebook.com/yourpage",
-        "https://www.linkedin.com/company/yourcompany"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "ESTA Services",
-        "itemListElement": [
-          {
-            "@type": "Service",
-            "name": "Jasa Teknik",
-            "description": "PFD, P&ID, Reverse Engineering, Desain Teknikal."
-          },
-          {
-            "@type": "Service",
-            "name": "Fabrikasi & Instalasi",
-            "description": "Piping, Mekanikal, Panel Unit, Ducting."
-          },
-          {
-            "@type": "Service",
-            "name": "Automation & PLC",
-            "description": "Programming, Wiring & Terminasi, Commissioning."
-          },
-          {
-            "@type": "Service",
-            "name": "Perawatan Mesin",
-            "description": "Overhaul mesin industri, maintenance utility (pump, boiler)."
-          }
-        ]
-      }
-    }
-    </script>
-    <!-- Tailwind CSS CDN - Non-blocking -->
-    <script src="https://cdn.tailwindcss.com" media="print" onload="this.media='all'"></script>
-    <noscript><link href="https://cdn.tailwindcss.com" rel="stylesheet"></noscript>
-    <!-- Font Awesome - Preload for better performance -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <!-- Google Fonts - Preconnect and Preload -->
+    <meta name="description" content="PT. Entegra Soba Tama (ESTA) - Solusi Terintegrasi Engineering, Procurement, Construction & Installation (EPCI) untuk industri proses, mekanikal, perpipaan, elektrikal, dan instrumentasi.">
+    <title>PT. Entegra Soba Tama (ESTA) | Industrial EPCI & Automation Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0A1120',
+                            slate: '#111827',
+                            card: '#162033',
+                            red: '#DC2626',
+                            redHover: '#B91C1C',
+                            blue: '#2563EB',
+                        }
+                    },
+                    keyframes: {
+                        floatWa: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        }
+                    },
+                    animation: {
+                        'float-wa-1': 'floatWa 2.8s ease-in-out infinite',
+                        'float-wa-2': 'floatWa 2.8s ease-in-out 0.4s infinite',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-bg {
-            background-image: url('new-hero-bg.jpg');
+            background-image: linear-gradient(to right, rgba(10, 17, 32, 0.94) 0%, rgba(10, 17, 32, 0.84) 55%, rgba(10, 17, 32, 0.72) 100%), url('Slide8.JPG');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
-        /* Design System Variables */
-        :root {
-            /* Elegant Dark Theme - Charcoal depth with warm accents */
-            --background-rgb: 10, 10, 14; /* near-black charcoal for refined depth */
-            --card-rgb: 18, 22, 35; /* very dark slate with subtle warmth */
-            --foreground-rgb: 240, 242, 246; /* cool-white for maximum readability */
-            --primary-rgb: 59, 130, 246; /* strong blue-500 for primary actions */
-            --primary-hover-rgb: 76, 159, 255; /* brighter blue on hover */
-            --accent-rgb: 215, 125, 30; /* muted amber/copper for warmth */
-            --accent-hover-rgb: 230, 150, 50; /* warmer amber on hover */
-            --muted-rgb: 130, 135, 152; /* muted slate for secondary text */
-            --border-rgb: 40, 45, 65; /* soft border separation */
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --transition-fast: 150ms;
-            --transition: 300ms;
-            
-            /* Subtle gradient background for hero */
-            --hero-gradient: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(215,125,30,0.1));
-        }
-        [data-theme="light"] {
-            /* Elegant Light Theme - Clean sophistication */
-            --background-rgb: 248, 250, 252; /* slate-100 soft warm-white */
-            --card-rgb: 255, 255, 255; /* pure white */
-            --foreground-rgb: 10, 12, 15; /* deep charcoal for readability */
-            --primary-rgb: 30, 60, 110; /* deep blue for primary */
-            --primary-hover-rgb: 40, 80, 140; /* richer blue on hover */
-            --accent-rgb: 180, 95, 40; /* warm amber */
-            --accent-hover-rgb: 200, 120, 55; /* warmer amber on hover */
-            --muted-rgb: 70, 75, 85; /* muted medium-gray */
-            --border-rgb: 220, 225, 235; /* light border */
-        }
-        [data-theme="light"] {
-            /* Light Theme - Deeper gray background */
-            --background-rgb: 241, 245, 249; /* slate-100 */
-            --card-rgb: 255, 255, 255; /* pure white */
-            --foreground-rgb: 2, 6, 23; /* slate-950 */
-            --primary-rgb: 29, 78, 216; /* blue-700 */
-            --primary-hover-rgb: 30, 58, 138; /* blue-900 */
-            --accent-rgb: 217, 119, 6; /* amber-600 */
-            --muted-rgb: 71, 85, 105; /* slate-600 */
-            --border-rgb: 226, 232, 240; /* slate-200 */
-        }
-        .bg-main { background-color: rgb(var(--background-rgb)); }
-        .text-main { color: rgb(var(--foreground-rgb)); }
-        .border-main { border-color: rgb(var(--border-rgb)); }
-        .bg-primary { background-color: rgb(var(--primary-rgb)); }
-        .hover\:bg-primary:hover { background-color: rgb(var(--primary-hover-rgb)); }
-        .text-primary { color: rgb(var(--primary-rgb)); }
-        .hover\:text-primary:hover { color: rgb(var(--primary-hover-rgb)); }
-        .bg-accent { background-color: rgb(var(--accent-rgb)); }
-        .text-accent { color: rgb(var(--accent-rgb)); }
-        .text-muted { color: rgb(var(--muted-rgb)); }
-        .focus-visible\:outline-none:focus-visible { outline: none; }
-        .focus-visible\:ring-2:focus-visible { ring-width: 2px; }
-        .focus-visible\:ring-primary:focus-visible { ring-color: rgb(var(--primary-rgb)); }
-        .focus-visible\:ring-offset-2:focus-visible { ring-offset-width: 2px; }
-        .focus-visible\:ring-offset-main:focus-visible { ring-offset-color: rgb(var(--background-rgb)); }
-        
-        .solid-card {
-            background-color: rgb(var(--card-rgb));
-            border-radius: var(--radius-lg);
-            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.3), 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgb(var(--border-rgb));
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-        }
-        
-        .solid-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 12px 30px 0px rgba(var(--primary-rgb), 0.15), 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        .text-shadow-strong {
-            text-shadow: 0px 0px 15px rgba(0,0,0,0.8), 0px 0px 5px rgba(0,0,0,0.9);
-        }
-
-        /* Text Enhancements */
-        .gradient-text {
-            background: linear-gradient(var(--primary-rgb), var(--accent-hover-rgb));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .bg-subtle {
-            background: radial-gradient(ellipse at 30% 20%, rgba(var(--primary-rgb), 0.08) 0%, transparent 50%),
-                        radial-gradient(ellipse at 70% 80%, rgba(var(--accent-rgb), 0.05) 0%, transparent 50%);
-        }
-        
-        /* Reduced motion fallback */
-        @media (prefers-reduced-motion: reduce) {
-            .section-enter-from, .section-enter-to {
-                transition: opacity 150ms ease, transform 150ms ease;
-            }
-            .solid-card:hover {
-                transform: none;
-            }
+        .grid-pattern {
+            background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
         }
     </style>
 </head>
-<body class="bg-main text-main antialiased selection:bg-primary/20 selection:text-main">
+<body class="bg-brand-navy text-slate-100 antialiased selection:bg-brand-red selection:text-white">
 
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-2 rounded-md bg-primary/20 text-primary hover:bg-primary/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
-        <i class="fas fa-moon" id="theme-icon"></i>
-    </button>
-
-    <!-- Navbar -->
-    <header class="fixed w-full top-0 z-50 bg-main border-b border-main shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3 group">
-                <img src="logo.jpg" alt="Logo ESTA" width="120" height="40" loading="lazy" class="h-12 w-auto rounded object-cover shadow-sm group-hover:scale-105 transition-transform duration-300">
-                <div class="hidden sm:block">
-                    <span class="text-lg font-extrabold tracking-tighter text-main block leading-none">PT. ENTEGRA SOBA TAMA</span>
-                    <span class="text-xs text-primary font-medium tracking-wide">Bringing Ideas to Life</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-muted">
-                <a href="#tentang" class="hover:text-main transition-colors" aria-label="Tentang Kami section">Tentang Kami</a>
-                <a href="#layanan" class="hover:text-main transition-colors" aria-label="Layanan section">Layanan</a>
-                <a href="#sertifikasi" class="hover:text-main transition-colors" aria-label="Sertifikasi section">Sertifikasi</a>
-                <a href="#portfolio" class="hover:text-main transition-colors" aria-label="Portfolio section">Portofolio</a>
-                <a href="#kontak" class="bg-primary hover:bg-primary/90 text-main px-5 py-2.5 rounded-lg transition-all shadow-md">Hubungi Kami</a>
-            </nav>
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md bg-primary/20 text-primary hover:bg-primary/30" aria-label="Open mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-main/95 backdrop-blur-md">
-        <div class="px-4 pt-5 pb-4 space-y-6 sm:p-6">
-            <a href="#tentang" class="block text-lg font-medium text-main hover:text-primary" aria-label="Tentang Kami section">Tentang Kami</a>
-            <a href="#layanan" class="block text-lg font-medium text-main hover:text-primary" aria-label="Layanan section">Layanan</a>
-            <a href="#sertifikasi" class="block text-lg font-medium text-main hover:text-primary" aria-label="Sertifikasi section">Sertifikasi</a>
-            <a href="#portfolio" class="block text-lg font-medium text-main hover:text-primary" aria-label="Portfolio section">Portofolio</a>
-            <a href="#kontak" class="block w-full text-center bg-primary text-main px-5 py-2.5 rounded-lg shadow-md" aria-label="Hubungi Kami section">Hubungi Kami</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative pt-32 pb-24 md:pt-48 md:pb-32 hero-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-main tracking-tighter leading-[1.1] mb-6 text-shadow-strong gradient-text">
-                    Solusi Terintegrasi Rekayasa & Konstruksi Industri
-                </h1>
-                <p class="text-lg sm:text-xl text-main/90 font-medium mb-8 leading-relaxed text-shadow-strong">
-                    Spesialis di bidang Proses, Mekanikal, Perpipaan, Elektrik, dan Instrumentasi. Kami berkomitmen memberikan kualitas dan keamanan terbaik sejak 2023.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#portfolio" class="bg-primary hover:bg-primary/90 text-main font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
-                        <span>Lihat Proyek Kami</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="#kontak" class="border border-primary hover:bg-primary/20 text-primary font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center space-x-2">
-                        <span>Hubungi Kami Sekarang</span>
-                        <i class="fa-solid fa-phone"></i>
-                    </a>
-                </div>
+    <!-- Top Corporate Trust Bar -->
+    <div class="bg-slate-950 border-b border-slate-800/80 text-xs text-slate-400 hidden lg:block">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-9 flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-brand-red"></i> NIB: 2812230271534 • Status PKP Terdaftar</span>
+                <a href="https://maps.app.goo.gl/JhYUE5xFckrTpshC9" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-slate-500"></i> Cikarang, Jawa Barat
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Tentang & Visi Misi -->
-    <section id="tentang" class="py-20 bg-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-main">
-                    <img src="new-about-bg.jpg" alt="Visi Misi ESTA" width="800" height="600" loading="lazy" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div>
-                    <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2 gradient-text">Profil Perusahaan</h2>
-                    <h3 class="text-3xl font-bold text-main mb-6 gradient-text">Latar Belakang & Legalitas</h3>
-                    <p class="text-muted mb-4 leading-relaxed">
-                        PT. Entegra Soba Tama (ESTA) merupakan perusahaan yang bergerak di bidang rekayasa dan konstruksi yang berdiri sejak tahun 2023 di Cikarang.
-                    </p>
-                    <div class="bg-main/50 p-6 rounded-xl border border-main mt-6">
-                        <img src="new-legal-doc.JPG" alt="Legalitas Dokumen" width="800" height="600" loading="lazy" class="w-full rounded mb-4 object-cover">
-                        <p class="text-sm text-muted">Resmi terdaftar dengan NIB: 2812230271534 dan status Pengusaha Kena Pajak (PKP).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Layanan & Keahlian -->
-    <section id="layanan" class="py-20 bg-main/50 border-y border-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2 gradient-text">Our Services</h2>
-                <h3 class="text-3xl font-bold text-main">Layanan & Keahlian Utama</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                <div>
-                    <img src="new-skills-bg.JPG" alt="Our Service Overview" width="800" height="600" loading="lazy" class="w-full rounded-2xl shadow-lg border border-main">
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="solid-card p-6">
-                        <i class="fa-solid fa-drafting-compass text-2xl text-primary mb-3 block"></i>
-                        <h4 class="font-bold text-main mb-2">Jasa Teknik</h4>
-                        <p class="text-xs text-muted">PFD, P&ID, Reverse Engineering, Desain Teknikal.</p>
-                    </div>
-                    <div class="solid-card p-6">
-                        <i class="fa-solid fa-wrench text-2xl text-primary mb-3 block"></i>
-                        <h4 class="font-bold text-main mb-2">Fabrikasi & Instalasi</h4>
-                        <p class="text-xs text-muted">Piping, Mekanikal, Panel Unit, Ducting.</p>
-                    </div>
-                    <div class="solid-card p-6">
-                        <i class="fa-solid fa-microchip text-2xl text-primary mb-3 block"></i>
-                        <h4 class="font-bold text-main mb-2">Automation & PLC</h4>
-                        <p class="text-xs text-muted">Programming, Wiring & Terminasi, Commissioning.</p>
-                    </div>
-                    <div class="solid-card p-6">
-                        <i class="fa-solid fa-gears text-2xl text-primary mb-3 block"></i>
-                        <h4 class="font-bold text-main mb-2">Perawatan Mesin</h4>
-                        <p class="text-xs text-muted">Overhaul mesin industri, maintenance utility (pump, boiler).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sertifikasi -->
-    <section id="sertifikasi" class="py-20 bg-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Sertifikasi Keahlian</h2>
-                <h3 class="text-3xl font-bold text-main">Standar Keahlian Tim</h3>
-            </div>
-            <div class="flex justify-center">
-                <a href="Slide5.JPG" target="_blank" rel="noopener noreferrer" class="max-w-full md:max-w-4xl rounded-xl shadow-2xl border border-main hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">
-                    <img src="Slide5.JPG" alt="Sertifikasi Keahlian ESTA" width="800" height="600" loading="lazy" class="w-full h-auto object-cover rounded-xl">
+            <div class="flex items-center space-x-5">
+                <a href="mailto:sales@entegra-esta.com" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-slate-500"></i> sales@entegra-esta.com
+                </a>
+                <a href="tel:+62811860127" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-slate-500"></i> +62 811-8601-27
+                </a>
+                <a href="tel:+628161400551" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-slate-500"></i> +62 816-1400-551
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-20 bg-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Klien Kami</h2>
-                <h3 class="text-3xl font-bold text-main">Testimonial</h3>
-            </div>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Testimonial 1 -->
-                <div class="solid-card p-6">
-                    <p class="italic text-muted mb-4">"ESTA memberikan solusi yang sangat profesional dan tepat waktu untuk proyek piping kami. Rekomendasi tinggi!"</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-main">PT Barata Indonesia</h4>
-                            <p class="text-sm text-muted">Project Manager</p>
-                        </div>
-                    </div>
+    <!-- Navbar -->
+    <header class="sticky w-full top-0 z-50 bg-brand-navy/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#beranda" class="flex items-center space-x-3.5 group">
+                <img src="logo.jpg" alt="Logo PT. Entegra Soba Tama" class="h-11 w-auto rounded-lg object-cover ring-1 ring-slate-700 group-hover:ring-brand-red transition-all">
+                <div>
+                    <span class="font-display text-base sm:text-lg font-extrabold tracking-tight text-white block leading-tight">PT. ENTEGRA SOBA TAMA</span>
+                    <span class="text-[11px] font-medium tracking-wider uppercase text-slate-400 block">Engineering • Procurement • Construction</span>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="solid-card p-6">
-                    <p class="italic text-muted mb-4">"Tim ESTa sangat kompetent dalam menangani sistem kontrol PLC untuk infrastruktur kritis kami."</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-main">PT Pertamina EP Zone 7</h4>
-                            <p class="text-sm text-muted">Engineering Lead</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="solid-card p-6">
-                    <p class="italic text-muted mb-4">"Layanan fabrikasi dan instalasi ESTA exceeds expectations, dengan atenção aos detalhes excepcionais."</p>
-                    <div class="flex items-center space-x-3">
-                        <img src="logo.jpg" alt="Klien" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h4 class="font-bold text-main">PT Medco E&P</h4>
-                            <p class="text-sm text-muted">Operations Supervisor</p>
-                        </div>
-                    </div>
-                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300" aria-label="Navigasi Utama">
+                <a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-white transition-colors">Layanan</a>
+                <a href="#sertifikasi" class="hover:text-white transition-colors">Sertifikasi</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portofolio</a>
+                <a href="#kontak" class="bg-brand-red hover:bg-brand-redHover text-white font-semibold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-red-950/30 inline-flex items-center gap-2">
+                    <span>Konsultasi Proyek</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" type="button" aria-label="Buka menu navigasi" aria-expanded="false" class="md:hidden p-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                <i class="fa-solid fa-bars text-xl" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2">
+            <a href="#tentang" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-white">Tentang Kami</a>
+            <a href="#layanan" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-white">Layanan & Keahlian</a>
+            <a href="#sertifikasi" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-white">Sertifikasi Tim</a>
+            <a href="#portfolio" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-white">Portofolio Proyek</a>
+            <div class="pt-2">
+                <a href="#kontak" class="mobile-link block w-full text-center bg-brand-red hover:bg-brand-redHover text-white font-semibold px-5 py-3 rounded-lg">Hubungi Tim Engineering</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Blog/News -->
-    <section id="blog" class="py-20 bg-main/50 border-t border-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Berita & Artikel</h2>
-                <h3 class="text-3xl font-bold text-main">Terbaru dari ESTA</h3>
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="relative py-20 sm:py-28 lg:py-36 hero-bg border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-xs font-semibold text-slate-200 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+                        <span>Mitra EPCI & Otomasi Industri Terpercaya</span>
+                    </div>
+                    <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-6">
+                        Solusi Terintegrasi Rekayasa & Konstruksi Industri
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-slate-300 mb-9 leading-relaxed max-w-2xl">
+                        Spesialis di bidang <strong class="text-white font-semibold">Proses, Mekanikal, Perpipaan, Elektrikal, dan Instrumentasi</strong>. Menghadirkan presisi rekayasa, kepatuhan K3, dan keandalan operasional untuk fasilitas industri Anda.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontak" class="bg-brand-red hover:bg-brand-redHover text-white font-semibold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-red-950/40 inline-flex items-center justify-center gap-2.5">
+                            <span>Ajukan Penawaran / RFQ</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#portfolio" class="bg-slate-900/90 hover:bg-slate-800 text-white font-semibold px-7 py-3.5 rounded-xl border border-slate-700 hover:border-slate-500 transition-all inline-flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-layer-group text-slate-400"></i>
+                            <span>Eksplorasi Portofolio</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Key Trust Metrics Strip -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-14 pt-10 border-t border-slate-800/90">
+                    <div class="bg-slate-900/75 backdrop-blur-sm border border-slate-800 rounded-xl p-4 sm:p-5">
+                        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">10+</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Proyek EPCI & Otomasi Terselesaikan</div>
+                    </div>
+                    <div class="bg-slate-900/75 backdrop-blur-sm border border-slate-800 rounded-xl p-4 sm:p-5">
+                        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">5 Disiplin</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Proses, Piping, Mekanikal, Elektrik & PLC</div>
+                    </div>
+                    <div class="bg-slate-900/75 backdrop-blur-sm border border-slate-800 rounded-xl p-4 sm:p-5">
+                        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">100% PKP</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Legalitas Korporasi & Pajak Resmi</div>
+                    </div>
+                    <div class="bg-slate-900/75 backdrop-blur-sm border border-slate-800 rounded-xl p-4 sm:p-5">
+                        <div class="font-display text-2xl sm:text-3xl font-extrabold text-white">Zero LTI</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Komitmen Standar Keselamatan Kerja</div>
+                    </div>
+                </div>
             </div>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Blog Post 1 -->
-                <div class="solid-card p-6">
-                    <img src="Slide12.JPG" alt="Proyek Hydrant System" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
-                    <h4 class="font-bold text-main mb-2">Peningkatan Sistem Hydrant</h4>
-                    <p class="text-sm text-muted mb-2">April 2026 - ESTA berhasil menyelesaikan upgrade sistem hydrant dengan standar internasional.</p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
-                </div>
-                <!-- Blog Post 2 -->
-                <div class="solid-card p-6">
-                    <img src="Slide13.JPG" alt="Spray Dryer Chamber" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
-                    <h4 class="font-bold text-main mb-2">Inovasi Spray Dryer</h4>
-                    <p class="text-sm text-muted mb-2">Maret 2026 - Desain chamber baru yang meningkatkan efisiensi 20%.</p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
-                </div>
-                <!-- Blog Post 3 -->
-                <div class="solid-card p-6">
-                    <img src="Slide14.JPG" alt="Mixer Tank 3 Ton" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
-                    <h4 class="font-bold text-main mb-2">Fabrikasi Mixer Tank</h4>
-                    <p class="text-sm text-muted mb-2">Februari 2026 - Tank custom dengan lining spesial untuk bahan kimia korosif.</p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Baca selengkapnya →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Proyek -->
-    <section id="portfolio" class="py-20 bg-main border-t border-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <img src="Slide10.JPG" alt="Our Project Overview" class="w-full max-w-3xl mx-auto rounded-xl opacity-80 mb-8 border border-main loading=lazy">
-                <h2 class="text-3xl font-bold text-main">Project Portfolio (EPCI)</h2>
-                <p class="text-sm text-muted mt-2">Kumpulan proyek unggulan yang telah kami kerjakan</p>
-            </div>
+        <!-- Tentang & Legalitas -->
+        <section id="tentang" class="py-20 lg:py-28 bg-brand-navy">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
+                            <img src="Slide6.JPG" alt="Visi dan Misi PT. Entegra Soba Tama" loading="lazy" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Profil Perusahaan</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-5">
+                            Mitra Rekayasa dengan Standar Tata Kelola B2B
+                        </h2>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Berdiri sejak tahun 2023 dan berbasis di kawasan industri Cikarang, <strong class="text-white">PT. Entegra Soba Tama (ESTA)</strong> hadir untuk menjawab kebutuhan manufaktur, energi, dan infrastruktur terhadap kontraktor rekayasa yang responsif, akurat secara teknis, dan patuh regulasi.
+                        </p>
 
-            <!-- Filter Buttons -->
-            <div class="mb-8 flex flex-wrap gap-4 justify-center">
-                <button data-filter="all" class="filter-btn bg-primary text-main px-4 py-2 rounded-md hover:bg-primary/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Semua</button>
-                <button data-filter="piping" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Piping</button>
-                <button data-filter="plc" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">PLC & Otomasi</button>
-                <button data-filter="struktural" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Struktural & Mekanikal</button>
-                <button data-filter="monitoring" class="filter-btn bg-main/50 text-primary px-4 py-2 rounded-md hover:bg-primary/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-main">Monitoring & Kontrol</button>
-            </div>
-
-            <div id="portfolio-grid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Proyek 1 -->
-                <div class="solid-card overflow-hidden group item" data-category="piping">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide12.JPG" alt="Hydrant System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Hydrant System</h4>
-                        <p class="text-xs text-muted">Desain hidrolik, material piping, fabrikasi, instalasi & commissioning test.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 2 -->
-                <div class="solid-card overflow-hidden group item" data-category="plc">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide13.JPG" alt="Spray Dryer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Spray Dryer Chamber</h4>
-                        <p class="text-xs text-muted">Analisa deluge system, penentuan orientasi nozzle, dan crack test chamber.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 3 -->
-                <div class="solid-card overflow-hidden group item" data-category="struktural">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide14.JPG" alt="Mixer 3 Ton" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Mixer Tank 3 Ton</h4>
-                        <p class="text-xs text-muted">Desain kalkulasi, fabrikasi QC, supervisi instalasi, dan commissioning test.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 4 -->
-                <div class="solid-card overflow-hidden group item" data-category="plc">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide15.JPG" alt="Chemical Liquid" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Chemical Process Control</h4>
-                        <p class="text-xs text-muted">Loading/unloading system, HMI, instrumentasi material preparation.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 5 -->
-                <div class="solid-card overflow-hidden group item" data-category="plc">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide16.JPG" alt="Programming & PLC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Bendungan Ameroro - PLC</h4>
-                        <p class="text-xs text-muted">Programming PLC, penyediaan panel, wiring & terminasi kontrol sistem.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 6 -->
-                <div class="solid-card overflow-hidden group item" data-category="monitoring">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide17.JPG" alt="Pertamina Amine Heater" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Amine Heater Control</h4>
-                        <p class="text-xs text-muted">Penggantian PLC, update instrumentasi, dan penarikan kabel kontrol.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 7 -->
-                <div class="solid-card overflow-hidden group item" data-category="struktural">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide18.JPG" alt="Monitoring System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">DAQ & Monitoring System</h4>
-                        <p class="text-xs text-muted">Water flow monitoring & acquisition system, PLC programming, panel wiring.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 8 -->
-                <div class="solid-card overflow-hidden group item" data-category="plc">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide19.JPG" alt="Engineering Medco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">MEG Injection Packages</h4>
-                        <p class="text-xs text-muted">Desain & perhitungan teknik, layout gambar engineering, piping & dokumen bid.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 9 -->
-                <div class="solid-card overflow-hidden group item" data-category="struktural">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide20.JPG" alt="Project X" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Industrial Project</h4>
-                        <p class="text-xs text-muted">Desain, fabrikasi, instalasi, dan commissioning sistem industri.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 10 -->
-                <div class="solid-card overflow-hidden group item" data-category="monitoring">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide21.JPG" alt="Project Y" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Infrastructure Project</h4>
-                        <p class="text-xs text-muted">Proyek infrastruktur dengan standar kualitas dan keamanan tinggi.</p>
-                    </div>
-                </div>
-
-                <!-- Proyek 11 -->
-                <div class="solid-card overflow-hidden group item" data-category="plc">
-                    <div class="h-56 overflow-hidden">
-                        <img src="Slide22.JPG" alt="Project Z" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 loading=lazy">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold text-main mt-1 mb-2">Proyek Lainnya</h4>
-                        <p class="text-xs text-muted">Desain spesial untuk aplikasi unik.</p>
-                    </div>
-                </div>
-
+                        <!-- Structured Corporate Credentials -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-brand-card p-4 rounded-xl border border-slate-800">
+                                <div class="text-xs text-slate-400 uppercase tracking-wider mb-1">Nomor Induk Berusaha</div>
+                                <div class="font-display font-bold text-white text-base">2812230271534</div>
                             </div>
-        </div>
-    </section>
+                            <div class="bg-brand-card p-4 rounded-xl border border-slate-800">
+                                <div class="text-xs text-slate-400 uppercase tracking-wider mb-1">Status Perpajakan</div>
+                                <div class="font-display font-bold text-emerald-400 text-base flex items-center gap-1.5">
+                                    <i class="fa-solid fa-circle-check text-sm"></i> Pengusaha Kena Pajak (PKP)
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Metal Treatment Section (Separate from Portfolio) -->
-    <section id="metal-treatment" class="py-20 bg-main/50 border-t border-main">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-2 gradient-text">Metal Treatment</h2>
-                <h3 class="text-3xl font-bold text-main">Proses Pemrosesan Logam Spesialisasi ESTA</h3>
-            </div>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Metal Treatment 1 -->
-                <div class="solid-card p-6">
-                    <img src="metal treatment (1).jpg" alt="Metal Treatment Process 1" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
-                    <h4 class="font-bold text-main mb-2">Proses Metal Treatment Tahap 1</h4>
-                    <p class="text-sm text-muted mb-2">Pemrosesan logam dasar logam untuk meningkatkan ketahanan korosi dan preparasi superficie.</p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Detil Proses →</a>
-                </div>
-                <!-- Metal Treatment 2 -->
-                <div class="solid-card p-6">
-                    <img src="metal treatment (2).jpg" alt="Metal Treatment Process 2" class="w-full h-48 object-cover rounded-lg mb-4 loading=lazy">
-                    <h4 class="font-bold text-main mb-2">Proses Metal Treatment Tahap 2</h4>
-                    <p class="text-sm text-muted mb-2">Teknik lanjutan pemrosesan logam untuk aplikasi industri berat dan kondisi ekstrem.</p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium">Detil Proses →</a>
+                        <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Dokumen Legalitas & Administrasi</span>
+                                <button type="button" onclick="openLightbox('Slide3.JPG', 'Dokumen Legalitas PT. Entegra Soba Tama')" class="text-xs font-semibold text-brand-red hover:underline">Perbesar Dokumen</button>
+                            </div>
+                            <img src="Slide3.JPG" alt="Legalitas PT. Entegra Soba Tama" loading="lazy" onclick="openLightbox('Slide3.JPG', 'Dokumen Legalitas PT. Entegra Soba Tama')" class="w-full rounded-xl object-cover cursor-zoom-in border border-slate-800 hover:border-slate-600 transition-colors">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Layanan & Keahlian -->
+        <section id="layanan" class="py-20 lg:py-28 bg-slate-950 border-y border-slate-800 grid-pattern">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-14">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Kapabilitas Teknis</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">Layanan & Keahlian Utama</h2>
+                    <p class="text-slate-400 text-base sm:text-lg">Cakupan pekerjaan terpadu mulai dari studi rekayasa awal (FEED/DED), pengadaan material, fabrikasi workshop, instalasi lapangan, hingga commissioning.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
+                            <img src="Slide9.JPG" alt="Lingkup Layanan Engineering ESTA" loading="lazy" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="w-11 h-11 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-brand-red mb-4">
+                                <i class="fa-solid fa-drafting-compass text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-white mb-2">Engineering & Design</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">Penyusunan PFD, P&ID, kalkulasi hidrolik & mekanikal, reverse engineering, serta paket dokumen tender/bid.</p>
+                        </div>
+
+                        <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                                <i class="fa-solid fa-industry text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-white mb-2">Fabrikasi & Instalasi</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">Fabrikasi sistem perpipaan (piping), tangki mixer, konstruksi mekanikal, ducting, serta panel kontrol industri.</p>
+                        </div>
+
+                        <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="w-11 h-11 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-brand-red mb-4">
+                                <i class="fa-solid fa-microchip text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-white mb-2">Automation, PLC & SCADA</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">Pemrograman PLC & HMI, integrasi sistem DAQ/monitoring, instrumentasi lapangan, wiring, hingga FAT/SAT.</p>
+                        </div>
+
+                        <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                            <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                                <i class="fa-solid fa-gears text-lg"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-white mb-2">Maintenance & Overhaul</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">Perawatan preventif dan overhaul mesin produksi serta peralatan utilitas pabrik (pompa, boiler, heater).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sertifikasi -->
+        <section id="sertifikasi" class="py-20 lg:py-24 bg-brand-navy">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Kualifikasi & Kepatuhan</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Sertifikasi Keahlian Tim</h2>
+                    <p class="text-slate-400 text-sm sm:text-base">Didukung tenaga ahli bersertifikat kompetensi resmi untuk menjamin standar mutu dan keselamatan di setiap proyek.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-brand-card p-3 sm:p-4 rounded-2xl border border-slate-800 shadow-2xl">
+                    <img src="Slide5.JPG" alt="Daftar Sertifikasi Keahlian Tim ESTA" loading="lazy" onclick="openLightbox('Slide5.JPG', 'Sertifikasi Keahlian Tim PT. Entegra Soba Tama')" class="w-full rounded-xl cursor-zoom-in">
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Proyek -->
+        <section id="portfolio" class="py-20 lg:py-28 bg-slate-950 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Rekam Jejak Pekerjaan</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">Project Portfolio (EPCI)</h2>
+                        <p class="text-slate-400 mt-2 max-w-2xl">Pengalaman eksekusi proyek di sektor minyak & gas, kimia, manufaktur, infrastruktur air, hingga fasilitas kesehatan.</p>
+                    </div>
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2" role="group" aria-label="Filter kategori proyek">
+                        <button type="button" data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs font-semibold bg-brand-red text-white transition-all">Semua (8)</button>
+                        <button type="button" data-filter="automation" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">Automation & PLC</button>
+                        <button type="button" data-filter="mechanical" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">Mechanical & Piping</button>
+                        <button type="button" data-filter="engineering" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all">Engineering Design</button>
+                    </div>
+                </div>
+
+                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                    <!-- Proyek 1 -->
+                    <article data-category="mechanical" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide12.JPG" alt="Proyek Hydrant System RS Walet Cirebon" loading="lazy" onclick="openLightbox('Slide12.JPG', 'Hydrant System - RS Walet Cirebon')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Mechanical & Piping</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-brand-red uppercase tracking-wider">RS Walet Cirebon</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Fire Hydrant System</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Desain hidrolik sistem pemadam kebakaran, pengadaan material piping, fabrikasi, instalasi lapangan, hingga commissioning test.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 2 -->
+                    <article data-category="engineering" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide13.JPG" alt="Proyek Spray Dryer Chamber PT Huntsman Indonesia" loading="lazy" onclick="openLightbox('Slide13.JPG', 'Spray Dryer Chamber - PT Huntsman Indonesia')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Engineering & Inspection</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider">PT Huntsman Indonesia</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Spray Dryer Chamber</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Analisa deluge protection system, penentuan sudut & orientasi nozzle, serta pelaksanaan crack test pada chamber.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 3 -->
+                    <article data-category="mechanical" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide14.JPG" alt="Proyek Mixer Tank 3 Ton PT Mane Indonesia" loading="lazy" onclick="openLightbox('Slide14.JPG', 'Mixer Tank 3 Ton - PT Mane Indonesia')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Fabrication & QC</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-brand-red uppercase tracking-wider">PT Mane Indonesia</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Mixer Tank 3 Ton</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Perhitungan desain struktur & agitator, fabrikasi dengan inspeksi QC ketat, supervisi instalasi, dan commissioning test.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 4 -->
+                    <article data-category="automation" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide16.JPG" alt="Proyek PLC Bendungan Ameroro PT Barata Indonesia" loading="lazy" onclick="openLightbox('Slide16.JPG', 'Bendungan Ameroro PLC - PT Barata Indonesia')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Automation & PLC</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-brand-red uppercase tracking-wider">PT Barata Indonesia</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Bendungan Ameroro – PLC System</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Pemrograman logika PLC, fabrikasi & penyediaan panel kontrol, wiring lapangan, serta terminasi sistem kendali pintu air.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 5 -->
+                    <article data-category="automation" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide17.JPG" alt="Proyek Amine Heater Control PT Pertamina EP Zone 7" loading="lazy" onclick="openLightbox('Slide17.JPG', 'Amine Heater Control - PT Pertamina EP Zone 7')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Oil & Gas Instrumentation</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider">PT Pertamina EP Zone 7</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Amine Heater Control Upgrade</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Penggantian unit PLC, pembaruan perangkat instrumentasi proses, dan penarikan kabel kontrol sesuai standar keselamatan migas.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 6 -->
+                    <article data-category="automation" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide18.JPG" alt="Proyek Chemical Process Control PT Argapura" loading="lazy" onclick="openLightbox('Slide18.JPG', 'Chemical Process Control - PT Argapura')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Automation & HMI</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-brand-red uppercase tracking-wider">PT Argapura</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">Chemical Process Control</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Otomasi sistem loading/unloading bahan kimia, pengembangan antarmuka HMI, dan integrasi instrumentasi material preparation.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 7 -->
+                    <article data-category="automation" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide19.JPG" alt="Proyek DAQ Monitoring System PT ALBA Indonesia" loading="lazy" onclick="openLightbox('Slide19.JPG', 'DAQ & Monitoring System - PT ALBA Indonesia')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">DAQ & Telemetry</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider">PT ALBA Indonesia</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">DAQ & Water Flow Monitoring</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Sistem akuisisi data (DAQ) & pemantauan debit air secara real-time, pemrograman PLC, dan perakitan wiring panel.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 8 -->
+                    <article data-category="engineering" class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-600 transition-all flex flex-col group">
+                        <div class="h-56 overflow-hidden relative bg-slate-900">
+                            <img src="Slide20.JPG" alt="Proyek MEG Injection Packages PT Medco E&P" loading="lazy" onclick="openLightbox('Slide20.JPG', 'MEG Injection Packages - PT Medco E&P')" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+                            <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-slate-200 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-slate-700">Detailed Engineering</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-xs font-bold text-brand-red uppercase tracking-wider">PT Medco E&P</div>
+                            <h3 class="font-display text-lg font-bold text-white mt-1 mb-2">MEG Injection Packages</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed flex-1">Desain & kalkulasi teknik terperinci, gambar layout engineering, perpipaan proses, dan penyusunan dokumen teknis tender.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & RFQ Section -->
+        <section id="kontak" class="py-20 lg:py-28 bg-brand-navy border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Direct Corporate Info -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Hubungi Kami</span>
+                            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">Diskusikan Kebutuhan Proyek Anda</h2>
+                            <p class="text-slate-400 leading-relaxed">Tim engineering dan estimator kami siap membantu review spesifikasi teknis, survei lokasi, maupun penyusunan penawaran harga (RFQ/Tender).</p>
+                        </div>
+
+                        <div class="space-y-5">
+                            <!-- Kantor & Workshop dengan Link Google Maps -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-red shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-white text-sm">Kantor & Workshop</h3>
+                                    <a href="https://maps.app.goo.gl/JhYUE5xFckrTpshC9" target="_blank" rel="noopener noreferrer" class="group block text-sm text-slate-400 hover:text-white mt-1 leading-relaxed transition-colors">
+                                        Ruko Pallazo Blok AB No. 62, Villa Mutiara, Cikarang, Kab. Bekasi, Jawa Barat 17532, Indonesia
+                                        <span class="mt-1.5 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300">
+                                            <i class="fa-solid fa-map-location-dot"></i> Buka di Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- 2 Nomor Telepon & WhatsApp -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-red shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="space-y-2">
+                                    <h3 class="font-display font-bold text-white text-sm">Telepon & WhatsApp Sales</h3>
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <a href="tel:+62811860127" class="text-sm text-slate-300 hover:text-white font-medium">+62 811-8601-27</a>
+                                        <span class="text-slate-600">|</span>
+                                        <a href="https://wa.me/62811860127" target="_blank" rel="noopener noreferrer" class="text-sm text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+                                            <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp 1
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-wrap items-center gap-3">
+                                        <a href="tel:+628161400551" class="text-sm text-slate-300 hover:text-white font-medium">+62 816-1400-551</a>
+                                        <span class="text-slate-600">|</span>
+                                        <a href="https://wa.me/628161400551" target="_blank" rel="noopener noreferrer" class="text-sm text-emerald-400 hover:text-emerald-300 font-medium inline-flex items-center gap-1">
+                                            <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp 2
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email Resmi -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-red shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-white text-sm">Email Resmi</h3>
+                                    <div class="mt-1 space-y-1 text-sm">
+                                        <a href="mailto:sales@entegra-esta.com" class="block text-slate-300 hover:text-white">sales@entegra-esta.com</a>
+                                        <a href="mailto:entegra.esta@gmail.com" class="block text-slate-400 hover:text-white">entegra.esta@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B2B Inquiry Form -->
+                    <div class="lg:col-span-7">
+                        <form id="rfq-form" class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-2xl space-y-5">
+                            <h3 class="font-display text-xl font-bold text-white">Formulir Permintaan Penawaran (RFQ)</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="pic-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nama PIC *</label>
+                                    <input type="text" id="pic-name" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-red">
+                                </div>
+                                <div>
+                                    <label for="company-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nama Perusahaan *</label>
+                                    <input type="text" id="company-name" required placeholder="PT. Nama Perusahaan" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-red">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="pic-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Korporat *</label>
+                                    <input type="email" id="pic-email" required placeholder="nama@perusahaan.co.id" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-red">
+                                </div>
+                                <div>
+                                    <label for="service-scope" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Lingkup Layanan</label>
+                                    <select id="service-scope" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-red">
+                                        <option value="Engineering & Design">Engineering & Design (P&ID / Kalkulasi)</option>
+                                        <option value="Fabrikasi & Instalasi Piping/Mekanikal">Fabrikasi & Instalasi Piping / Mekanikal</option>
+                                        <option value="Automation, PLC & SCADA">Automation, PLC & SCADA</option>
+                                        <option value="Maintenance & Overhaul">Maintenance & Overhaul Mesin</option>
+                                        <option value="Paket EPCI Terintegrasi">Paket EPCI Terintegrasi</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="project-brief" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Ringkasan Kebutuhan Proyek *</label>
+                                <textarea id="project-brief" rows="4" required placeholder="Jelaskan spesifikasi singkat, lokasi site, atau target jadwal pelaksanaan..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-red"></textarea>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+                                <span class="text-xs text-slate-400">Tujuan pengiriman: <strong class="text-slate-300">sales@entegra-esta.com</strong></span>
+                                <button type="submit" class="bg-brand-red hover:bg-brand-redHover text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                    <span>Kirim Permintaan</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer id="kontak" class="bg-main border-t border-main py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold text-main mb-6">Mulai Proyek Anda Bersama Kami</h2>
-            <p class="text-sm text-muted mb-8 max-w-2xl mx-auto">Kami siap memberikan solusi engineering dan instalasi terbaik untuk kebutuhan industri Anda.</p>
-            <div class="space-y-4">
-                <div class="flex flex-row items-center justify-center gap-3 flex-wrap">
-                    <div class="flex items-center gap-1">
-                        <a href="mailto:entegra.esta@gmail.com" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                            <span class="font-normal">entegra.esta@gmail.com</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-1">
-                        <a href="mailto:sales@entegra-esta.com" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                            <span class="font-normal">sales@entegra-esta.com</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-1">
-                        <a href="tel:+62811860127" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Phone">
-                            <i class="fas fa-phone"></i>
-                            <span class="font-normal">+62 811-8601-27</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-1">
-                        <a href="tel:+628161400551" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Phone">
-                            <i class="fas fa-phone"></i>
-                            <span class="font-normal">+62 816-1400-551</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-1">
-                        <a href="https://maps.app.goo.gl/JhYUE5xFckrTpshC9" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-muted hover:text-primary text-sm transition-colors" aria-label="Location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="font-normal whitespace-nowrap">Ruko Pallazo blok AB No. 62 Villa Mutiara, Cikarang, Jawa Barat, 17532, Indonesia</span>
-                        </a>
-                    </div>
-                </div>
+    <footer class="bg-slate-950 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <img src="logo.jpg" alt="Logo ESTA" class="h-8 w-auto rounded">
+                <span class="text-sm font-semibold text-slate-300">PT. Entegra Soba Tama (ESTA)</span>
             </div>
-            <p class="text-xs text-muted mt-4">&copy; 2026 PT. Entegra Soba Tama (ESTA). All rights reserved.</p>
+            <p class="text-xs text-slate-500 text-center sm:text-right">
+                © 2026 PT. Entegra Soba Tama (ESTA). All rights reserved. • Bringing Ideas to Life
+            </p>
         </div>
     </footer>
 
+    <!-- 2 Floating Animated WhatsApp Buttons -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3.5">
+        <!-- WhatsApp 1: +62 811-8601-27 -->
+        <a href="https://wa.me/62811860127?text=Halo%20Sales%201%20PT.%20Entegra%20Soba%20Tama,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20proyek."
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Chat WhatsApp Sales 1 (+62 811-8601-27)"
+           class="group flex items-center gap-3 animate-float-wa-1">
+            <span class="hidden sm:inline-block bg-slate-900/95 text-white text-xs font-semibold px-3.5 py-2 rounded-full border border-slate-700 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Sales 1: +62 811-8601-27
+            </span>
+            <span class="relative flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-lg shadow-emerald-950/60 transition-transform duration-300 group-hover:scale-110">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-25"></span>
+                <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl relative z-10"></i>
+                <span class="absolute -top-1 -left-1 bg-slate-950 text-emerald-400 border border-emerald-500/50 text-[10px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow">1</span>
+            </span>
+        </a>
+
+        <!-- WhatsApp 2: +62 816-1400-551 -->
+        <a href="https://wa.me/628161400551?text=Halo%20Sales%202%20PT.%20Entegra%20Soba%20Tama,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20proyek."
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Chat WhatsApp Sales 2 (+62 816-1400-551)"
+           class="group flex items-center gap-3 animate-float-wa-2">
+            <span class="hidden sm:inline-block bg-slate-900/95 text-white text-xs font-semibold px-3.5 py-2 rounded-full border border-slate-700 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Sales 2: +62 816-1400-551
+            </span>
+            <span class="relative flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-950/60 transition-transform duration-300 group-hover:scale-110">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-25"></span>
+                <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl relative z-10"></i>
+                <span class="absolute -top-1 -left-1 bg-slate-950 text-emerald-400 border border-emerald-500/50 text-[10px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow">2</span>
+            </span>
+        </a>
+    </div>
+
+    <!-- Lightbox Modal for Documents & Project Photos -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau Gambar" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm items-center justify-center p-4">
+        <div class="relative max-w-5xl w-full bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-slate-800">
+                <span id="lightbox-caption" class="text-sm font-semibold text-white"></span>
+                <button type="button" onclick="closeLightbox()" aria-label="Tutup pratinjau" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-4 bg-slate-950 flex justify-center max-h-[80vh] overflow-auto">
+                <img id="lightbox-img" src="" alt="Pratinjau" class="max-w-full h-auto rounded-lg object-contain">
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const htmlElement = document.documentElement;
-
-        function updateThemeIcon(isDark) {
-            themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
-        }
-
-        // Check for saved theme preference or use system preference
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (savedTheme) {
-            htmlElement.setAttribute('data-theme', savedTheme);
-            updateThemeIcon(savedTheme === 'dark');
-        } else {
-            htmlElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
-            updateThemeIcon(systemPrefersDark);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme === 'dark');
-        });
-
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
 
         mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
-            mobileMenu.classList.toggle('hidden');
-            // Toggle icon
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.className = isOpen ? 'fas fa-bars' : 'fas fa-times';
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+            mobileMenuIcon.className = isHidden ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
         });
 
-        // Portfolio Filter
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuIcon.className = 'fa-solid fa-bars text-xl';
+            });
+        });
+
+        // Portfolio Category Filter
         const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('#portfolio-grid .item');
+        const projectCards = document.querySelectorAll('.project-card');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-main'));
-                filterButtons.forEach(btn => btn.classList.add('bg-main/50', 'text-primary'));
-                button.classList.remove('bg-main/50', 'text-primary');
-                button.classList.add('bg-primary', 'text-main');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-brand-red', 'text-white');
+                    b.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+                });
+                btn.classList.add('bg-brand-red', 'text-white');
+                btn.classList.remove('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
 
-                const filter = button.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    const itemCategory = item.getAttribute('data-category');
-                    if (filter === 'all' || itemCategory === filter) {
-                        item.classList.remove('hidden');
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.classList.remove('hidden');
                     } else {
-                        item.classList.add('hidden');
+                        card.classList.add('hidden');
                     }
                 });
             });
         });
 
-        // Initialize first button as active
-        document.querySelector('[data-filter="all"]').classList.add('bg-primary', 'text-main');
-        document.querySelector('[data-filter="all"]').classList.remove('bg-main/50', 'text-primary');
+        // Lightbox Preview
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
 
-        // Optional: Add intersection observer for fade-in sections on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        function openLightbox(src, caption) {
+            lightboxImg.src = src;
+            lightboxImg.alt = caption;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('section-enter-to');
-                    entry.target.classList.remove('section-enter-from');
-                }
-            });
-        }, observerOptions);
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.src = '';
+        }
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('section-enter-from');
-            observer.observe(section);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        });
+
+        // B2B RFQ Mailto Submission
+        document.getElementById('rfq-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pic = document.getElementById('pic-name').value.trim();
+            const company = document.getElementById('company-name').value.trim();
+            const email = document.getElementById('pic-email').value.trim();
+            const scope = document.getElementById('service-scope').value;
+            const brief = document.getElementById('project-brief').value.trim();
+
+            const subject = encodeURIComponent(`[RFQ - ${scope}] ${company}`);
+            const body = encodeURIComponent(
+                `Yth. Tim Sales PT. Entegra Soba Tama,\n\n` +
+                `Berikut pengajuan kebutuhan proyek kami:\n` +
+                `- Nama PIC: ${pic}\n` +
+                `- Perusahaan: ${company}\n` +
+                `- Email: ${email}\n` +
+                `- Lingkup Layanan: ${scope}\n\n` +
+                `Ringkasan Kebutuhan:\n${brief}\n\n` +
+                `Terima kasih.`
+            );
+            window.location.href = `mailto:sales@entegra-esta.com?cc=entegra.esta@gmail.com&subject=${subject}&body=${body}`;
         });
     </script>
 </body>
